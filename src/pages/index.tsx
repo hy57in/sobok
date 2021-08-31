@@ -8,6 +8,11 @@ import HomeLayout from 'src/layouts/HomeLayout'
 import { Carousel } from 'antd'
 import Category from 'src/components/Category'
 
+const Container = styled.div`
+  width: 100%;
+  left: 50%;
+`
+
 const CarouselDiv = styled.div`
   position: relative;
   height: 9.7rem;
@@ -19,36 +24,38 @@ const CarouselDiv = styled.div`
 export default function HomePage() {
   return (
     <PageHead>
-      <Carousel autoplay>
-        <CarouselDiv>
-          <Image src="/images/carousel@3x.webp" alt="carousel" layout="fill" />
-        </CarouselDiv>
-        <CarouselDiv>
-          <Image src="/images/carousel@3x.webp" alt="carousel" layout="fill" />
-        </CarouselDiv>
-        <CarouselDiv>
-          <Image src="/images/carousel@3x.webp" alt="carousel" layout="fill" />
-        </CarouselDiv>
-        <CarouselDiv>
-          <Image src="/images/carousel@3x.webp" alt="carousel" layout="fill" />
-        </CarouselDiv>
-      </Carousel>
-      <Category />
-      <div>
-        <Link href="/@userId1">사용자 페이지</Link>
-      </div>
-      <div>
-        <Link href="/@userId2">사용자2 페이지</Link>
-      </div>
-      <div>
-        <Link href="/register">회원가입 페이지</Link>
-      </div>
-      <div>
-        <Link href="/login">로그인 페이지</Link>
-      </div>
-      <div>
-        <Link href="/stores/1">매장 페이지</Link>
-      </div>
+      <Container>
+        <Carousel autoplay>
+          <CarouselDiv>
+            <Image src="/images/carousel@3x.webp" alt="carousel" layout="fill" />
+          </CarouselDiv>
+          <CarouselDiv>
+            <Image src="/images/carousel@3x.webp" alt="carousel" layout="fill" />
+          </CarouselDiv>
+          <CarouselDiv>
+            <Image src="/images/carousel@3x.webp" alt="carousel" layout="fill" />
+          </CarouselDiv>
+          <CarouselDiv>
+            <Image src="/images/carousel@3x.webp" alt="carousel" layout="fill" />
+          </CarouselDiv>
+        </Carousel>
+        <Category />
+        <div>
+          <Link href="/@userId1">사용자 페이지</Link>
+        </div>
+        <div>
+          <Link href="/@userId2">사용자2 페이지</Link>
+        </div>
+        <div>
+          <Link href="/register">회원가입 페이지</Link>
+        </div>
+        <div>
+          <Link href="/login">로그인 페이지</Link>
+        </div>
+        <div>
+          <Link href="/stores/1">매장 페이지</Link>
+        </div>
+      </Container>
     </PageHead>
   )
 }
